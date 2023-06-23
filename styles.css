@@ -1,0 +1,269 @@
+body{
+  background-image: url(./background.png);
+  background-size: cover;
+  background-position: center;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(./Teko-Regular.ttf);
+}
+
+@font-face {
+  font-family:AbrilFatFace;
+  src: url(./AbrilFatface-Regular.ttf);
+}
+
+.section-title {
+  font-size: 4.3em;
+  font-family: AbrilFatFace;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.image-container2 {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  text-align: center;
+}
+
+.image-row .about-image {
+  margin: 0 100px; /* Adjust the margin as needed */
+}
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.image-box {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #fff;
+  margin: 10px;
+}
+
+.about-image {
+  border-radius: 50%;
+  max-width: 30%;
+  height: auto;
+  object-fit: cover;
+  animation: popOut 1s ease-in-out;
+}
+
+.section-content {
+  font-size: 1.2em;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  font-family: myFirstFont;
+  color: #fff;
+}
+
+.content-box {
+  padding: 20px;
+  border-width: 0 property;
+  border: 0 property;
+  font-size: 1.2em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  line-height: 1.5;
+  color: white;
+  max-width: 800px;
+  margin: 20px;
+  text-align: justify;
+}
+
+@keyframes popOut {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links a img {
+  width: 65px;
+  height: 65px;
+}
+
+.social-links a img:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.disclaimer-box {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.disclaimer {
+  font-size: 14px;
+  color: black  
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-content,
+.section-title,
+.about-image,
+.content-box {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.container {
+  width: 15px;
+  height: 15px;
+  margin: 100px auto;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cloud {
+  width: 250px;
+}
+
+.front {
+  padding-top: 45px;
+  margin-left: 25px;
+  display: inline;
+  position: absolute;
+  z-index: 11;
+  animation: clouds 8s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.back {
+  margin-top: -30px;
+  margin-left: 150px;
+  z-index: 12;
+  animation: clouds 12s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.right-front {
+  width: 45px;
+  height: 45px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: #4c9beb;
+  display: inline-block;
+  margin-left: -25px;
+  z-index: 5;
+}
+
+.left-front {
+  width: 65px;
+  height: 65px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: #4c9beb;
+  display: inline-block;
+  z-index: 5;
+}
+
+.right-back {
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: #4c9beb;
+  display: inline-block;
+  margin-left: -20px;
+  z-index: 5;
+}
+
+.left-back {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: #4c9beb;
+  display: inline-block;
+  z-index: 5;
+}
+
+.sun {
+  width: 120px;
+  height: 120px;
+  background: -webkit-linear-gradient(to right, #fcbb04, #fffc00);
+  background: linear-gradient(to right, #fcbb04, #fffc00);
+  border-radius: 60px;
+  display: inline;
+  position: absolute;
+}
+
+.sunshine {
+  animation: sunshines 2s infinite;
+}
+
+@keyframes sunshines {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes clouds {
+  0% {
+    transform: translateX(15px);
+  }
+
+  50% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(15px);
+  }
+}
